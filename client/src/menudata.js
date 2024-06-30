@@ -7,7 +7,7 @@ const menuItems = [{
     ],
     "prices": [
         {
-            "idli-veg": 40,
+            "idli-veg": 60,
             "rawaidli-veg": 60,
             "podiidli-veg": 60,
         }
