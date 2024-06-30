@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { addToCart, deleteFromCart } from '../actions/cartActions';
+import Checkout from '../components/Checkout'
 
 export default function Cartscreen() {
   const cartState = useSelector(state => state.cartReducer);
@@ -48,7 +49,7 @@ export default function Cartscreen() {
         </div>
         <div className="col-md-4">
           <h2 style={{fontSize:'45px'}}>Sub Total : ₹{subtotal}</h2>
-          <button className='btn'>Check Out</button>
+          <Checkout subtotal={subtotal}/>
         </div>
       </div>
     </div>

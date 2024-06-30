@@ -5,6 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { getAllFoodsReducer } from './reducers/foodReducer';
 import { cartReducer } from './reducers/cartReducer';
 import { registerUserReducer, loginUserReducer } from './reducers/userReducer';
+import { placeOrderReducer } from './reducers/orderReducer';
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
@@ -35,6 +36,7 @@ const finalReducer = combineReducers({
   cartReducer: cartReducer,
   registerUserReducer: registerUserReducer,
   loginUserReducer: loginUserReducer,
+  placeOrderReducer:placeOrderReducer,
 });
 
 const composeEnhancers = composeWithDevTools({});
